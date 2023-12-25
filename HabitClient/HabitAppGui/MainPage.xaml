@@ -2,40 +2,64 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HabitAppGui.MainPage">
-
-    <ScrollView>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--USER DETAILS-->
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+            BackgroundColor="Chocolate">
+            <Button     BackgroundColor="LightYellow"
+    x:Name="UserButton" 
+    Text="Player"
+    TextColor="Black"/>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        </VerticalStackLayout>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+        <!--MAIN WINDOW-->
+        <VerticalStackLayout Grid.Column="1"
+                             BackgroundColor="BurlyWood"
+                             x:Name="MainWindow">
+            <Label HorizontalOptions="Center"
+                   x:Name="MainWindowTitle"
+                   FontSize="50"
+                   Text="Welcome!"/>
+            </VerticalStackLayout>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
+        <!--NAVIGATION-->
+        <VerticalStackLayout Grid.Column="2"
+                             BackgroundColor="Chocolate">
+            <Button    BackgroundColor="LightYellow"
+                x:Name="HabitsButton"
+                Text="Habits"
+                TextColor="Black"
+                Clicked="OnHabitsClicked"/>
+            <Button     BackgroundColor="LightYellow"
+                x:Name="DailyListButton"
+                Text="DailyList"
+                TextColor="Black"
+                Clicked="OnDailyListClicked"/>
+            <Button     BackgroundColor="LightYellow"
+                x:Name="ToDoButton"
+                Text="To Do"
+                TextColor="Black"
+                Clicked="OnToDoClicked"/>
+            <Button     BackgroundColor="LightYellow"
                 x:Name="CounterBtn"
                 Text="Click me"
+                TextColor="Black"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>
-    </ScrollView>
+
+    </Grid> 
+
 
 </ContentPage>

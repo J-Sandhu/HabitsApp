@@ -20,5 +20,18 @@
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
+        private void OnHabitsClicked(object sender, EventArgs e)
+        {
+            MainWindowTitle.Text = "Habits";
+        }
+        private void OnDailyListClicked(object sender, EventArgs e)
+        {
+            MainWindowTitle.Text = "Daily List";
+        }
+        private void OnToDoClicked(object sender, EventArgs e)
+        {
+            MainWindowTitle.Text = "To Do List";
+        }
+
     }
 }
