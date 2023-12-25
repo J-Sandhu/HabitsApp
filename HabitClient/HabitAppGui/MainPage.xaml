@@ -49,6 +49,7 @@
                 Text="To Do"
                 TextColor="Black"
                 Clicked="OnToDoClicked"/>
+            <!--
             <Button     BackgroundColor="LightYellow"
                 x:Name="CounterBtn"
                 Text="Click me"
@@ -56,6 +57,7 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
+            -->
 
         </VerticalStackLayout>
 
