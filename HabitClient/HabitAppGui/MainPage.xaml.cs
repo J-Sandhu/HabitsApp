@@ -30,6 +30,17 @@
         private void OnHabitsClicked(object sender, EventArgs e)
         {
             MainWindowTitle.Text = "Habits";
+            foreach (IView item in MainWindow.Children)
+            {
+                if (item is Label && item.Semantics!= null)
+                {
+                    VisualElement VisItem = (VisualElement)item;
+
+                    if (item.Semantics.Description.StartsWith("HabitItem"))
+                        VisItem.IsVisible = true;
+                    else VisItem.IsVisible = false;
+                }
+            }
         }
         /// <summary>
         /// This function modifies the main window header text,
@@ -40,6 +51,17 @@
         private void OnDailyListClicked(object sender, EventArgs e)
         {
             MainWindowTitle.Text = "Daily List";
+            foreach (IView item in MainWindow.Children)
+            {
+                if (item is Label && item.Semantics != null)
+                {
+                    VisualElement VisItem = (VisualElement)item;
+
+                    if (item.Semantics.Description.StartsWith("DailyListItem"))
+                        VisItem.IsVisible = true;
+                    else VisItem.IsVisible = false;
+                }
+            }
         }
         /// <summary>
         /// This function modifies the main window header text,
@@ -50,7 +72,19 @@
         private void OnToDoClicked(object sender, EventArgs e)
         {
             MainWindowTitle.Text = "To Do List";
+            foreach (IView item in MainWindow.Children)
+            {
+                if (item is Label && item.Semantics != null)
+                {
+                    VisualElement VisItem = (VisualElement)item;
+
+                    if (item.Semantics.Description.StartsWith("ToDoItem"))
+                        VisItem.IsVisible = true;
+                    else VisItem.IsVisible = false;
+                }
+            }
         }
+
 
     }
 }

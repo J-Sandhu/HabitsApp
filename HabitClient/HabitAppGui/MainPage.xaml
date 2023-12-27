@@ -29,7 +29,20 @@
                    x:Name="MainWindowTitle"
                    FontSize="50"
                    Text="Welcome!"/>
-            </VerticalStackLayout>
+
+            <Label HorizontalOptions="Center"
+                   Text="Some Habit"
+                   IsVisible="False"
+                   SemanticProperties.Description="HabitItem"/>  <!--I don't know the div tag equivalent of xml so I will use this instead-->
+            <Label HorizontalOptions="Center"
+                   Text="Some Daily List Item"
+                   IsVisible="False"
+                   SemanticProperties.Description="DailyListItem"/>
+            <Label HorizontalOptions="Center"
+                   Text="Some To Do Item"
+                   IsVisible="False"
+                   SemanticProperties.Description="ToDoItem"/>
+        </VerticalStackLayout>
 
         <!--NAVIGATION-->
         <VerticalStackLayout Grid.Column="2"
