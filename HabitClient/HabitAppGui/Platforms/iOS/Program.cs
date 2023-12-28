@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace HabitAppGui
+namespace View.Platforms.iOS
 {
     public class Program
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace HabitAppGui
+namespace View
 {
     public static class MauiProgram
     {

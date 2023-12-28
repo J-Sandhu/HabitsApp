@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace HabitAppGui
+namespace View.Platforms.MacCatalyst
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

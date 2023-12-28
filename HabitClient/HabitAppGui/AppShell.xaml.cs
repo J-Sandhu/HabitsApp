@@ -1,4 +1,4 @@
-﻿namespace HabitAppGui
+﻿namespace View
 {
     public partial class AppShell : Shell
     {

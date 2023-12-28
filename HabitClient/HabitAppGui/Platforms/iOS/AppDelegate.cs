@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace HabitAppGui
+namespace View.Platforms.iOS
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

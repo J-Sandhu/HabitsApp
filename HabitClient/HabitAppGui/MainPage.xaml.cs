@@ -1,12 +1,13 @@
-﻿namespace HabitAppGui
+﻿namespace View
 {
     public partial class MainPage : ContentPage
     {
-//        int count = 0;            //for sample button
+        //        int count = 0;            //for sample button
 
         public MainPage()
         {
             InitializeComponent();
+
         }
 
         //sample button method
@@ -32,7 +33,7 @@
             MainWindowTitle.Text = "Habits";
             foreach (IView item in MainWindow.Children)
             {
-                if (item is Label && item.Semantics!= null)
+                if (item is Label && item.Semantics != null)
                 {
                     VisualElement VisItem = (VisualElement)item;
 
@@ -86,7 +87,7 @@
         }
         private void OnNewTaskClicked(object sender, EventArgs e)
         {
-            MainWindow.Add(new Label{ Text="Habit Added" })
+            MainWindow.Add(new Label { Text = "Habit Added" });
         }
 
 

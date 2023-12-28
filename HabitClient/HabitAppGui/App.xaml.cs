@@ -1,4 +1,4 @@
-﻿namespace HabitAppGui
+﻿namespace View
 {
     public partial class App : Application
     {
