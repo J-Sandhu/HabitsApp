@@ -84,6 +84,10 @@
                 }
             }
         }
+        private void OnNewTaskClicked(object sender, EventArgs e)
+        {
+            MainWindow.Add(new Label{ Text="Habit Added" })
+        }
 
 
     }

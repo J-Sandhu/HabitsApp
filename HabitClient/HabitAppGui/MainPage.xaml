@@ -10,6 +10,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <!--USER DETAILS-->
         <VerticalStackLayout
@@ -43,6 +44,19 @@
                    IsVisible="False"
                    SemanticProperties.Description="ToDoItem"/>
         </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="1"
+                             Grid.Row="1"
+                             BackgroundColor="BurlyWood">
+            <Button BackgroundColor="LightYellow"
+                    x:Name="NewTaskButton"
+                    Text="New"
+                    TextColor="Black"
+                    Clicked="OnNewTaskClicked"
+                    HorizontalOptions="End"
+                    MaximumWidthRequest="100"
+                    VerticalOptions="End">
+            </Button>
+        </VerticalStackLayout>
 
         <!--NAVIGATION-->
         <VerticalStackLayout Grid.Column="2"
@@ -73,6 +87,12 @@
             -->
 
         </VerticalStackLayout>
+
+        <!--Background area-->
+        <VerticalStackLayout Grid.Row="1" Grid.Column="0"
+                             BackgroundColor="Chocolate"/>
+        <VerticalStackLayout Grid.Row="1" Grid.Column="2"
+                             Background="Chocolate"/>
 
     </Grid> 
 
