@@ -17,7 +17,7 @@ namespace Model
         public string name;
         public Habit(string name, bool positive, bool negative)
         {
-            this.name = name
+            this.name = name;
 
             this.positive = positive;
             this.negative = negative;
