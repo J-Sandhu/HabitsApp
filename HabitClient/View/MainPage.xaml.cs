@@ -1,4 +1,7 @@
-﻿namespace View
+﻿using Mopups.Pages;
+using Mopups.Services;
+
+namespace View
 {
     public partial class MainPage : ContentPage
     {
@@ -87,7 +90,7 @@
         }
         private void OnNewTaskClicked(object sender, EventArgs e)
         {
-            MainWindow.Add(new Label { Text = "Habit Added" });
+            MopupService.Instance.PushAsync(new HabitCapture());
         }
 
 
