@@ -3,11 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups" 
              x:Class="View.HabitCapture"
-             Title="HabitCapture">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="HabitCapture"
+             BackgroundColor="#80000000"
+             CloseWhenBackgroundIsClicked="False">
+    <ScrollView>
+        <VerticalStackLayout
+            BackgroundColor="White"
+            WidthRequest="300"
+            HeightRequest="300"
+            VerticalOptions="Center">
+            <Label 
+                Text="Create a Habit"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Entry
+                Text="Habit Name"/>
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Padding="10">
+                <Label 
+                    Text="Positive"/>
+                <CheckBox/>
+                <Label
+                    Text="Negative"/>
+                <CheckBox/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout 
+                Padding="10"
+                HorizontalOptions="Center">
+                <Button
+                    Text="Cancel"
+                    Clicked="DataCaptureCancelClicked"/>
+                <Button
+                Text="Confirm"
+                Clicked="HabitCaptureConfirmClicked"/>
+            </HorizontalStackLayout>
+
+            
+       </VerticalStackLayout>
+    </ScrollView>
 </mopups:PopupPage>
