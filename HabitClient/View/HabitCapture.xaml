@@ -17,16 +17,16 @@
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
             <Entry
-                Text="Habit Name"/>
+                Placeholder="Habit Name"
+                x:Name="HabitName"/>
             <HorizontalStackLayout
                 HorizontalOptions="Center"
                 Padding="10">
-                <Label 
-                    Text="Positive"/>
-                <CheckBox/>
-                <Label
-                    Text="Negative"/>
-                <CheckBox/>
+                <Label Text="Positive"/>
+                <CheckBox x:Name="Positive"/>
+
+                <Label Text="Negative"/>
+                <CheckBox x:Name="Negative"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout 
                 Padding="10"

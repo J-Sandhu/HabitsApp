@@ -5,12 +5,13 @@ namespace View
 {
     public partial class MainPage : ContentPage
     {
-        //        int count = 0;            //for sample button
+         Controller.HabitController c;
 
         public MainPage()
         {
+            c = new();
             InitializeComponent();
-
+            
         }
 
         //sample button method
@@ -90,7 +91,7 @@ namespace View
         }
         private void OnNewTaskClicked(object sender, EventArgs e)
         {
-            MopupService.Instance.PushAsync(new HabitCapture());
+            MopupService.Instance.PushAsync(new HabitCapture(c));
         }
 
 

@@ -12,6 +12,8 @@ namespace Model
     /// </summary>
     public class Habit
     {
+        public bool error;
+
         public bool positive;
         public bool negative;
         public string name;
@@ -21,6 +23,19 @@ namespace Model
 
             this.positive = positive;
             this.negative = negative;
+            this.error=false;
+
+        }
+        /// <summary>
+        /// Copies in data from a HabitSpecs object. HabitChecker class has functions for checking validity
+        /// </summary>
+        /// <param name="s"></param>
+        public Habit(HabitSpecs s)
+        {
+            this.name=s.name;
+            this.positive = s.positive;
+            this.negative = s.negative;
+            this.error = s.error;
 
         }
     }
